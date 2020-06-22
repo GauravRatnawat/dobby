@@ -23,8 +23,7 @@ spec:
     }
 
     environment {
-       registry = "dubby" 
-        registryUrl = "http://harbor.workshop.tw:30002/chartrepo/demo"
+       registry = "gauravratnawat/dubby" 
         registryCredential = 'dockerCreds'
         dockerImage = ""
     }
