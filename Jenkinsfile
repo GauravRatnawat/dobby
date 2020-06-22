@@ -23,8 +23,8 @@ spec:
     }
 
     environment {
-        registry = "dineshba/endgame"
-        registryCredential = 'dockerhub'
+        registry = "http://harbor.workshop.tw:30002/chartrepo/demo"
+        registryCredential = 'harbor-pull-secret'
         dockerImage = ""
     }
 
@@ -65,7 +65,7 @@ spec:
         stage('Deploy App') {
              steps {
                 script {
-                    kubernetesDeploy(configs: "dobby.yaml", kubeconfigId: "mykubeconfig")
+                    kubernetesDeploy(configs: "dobby.yaml", kubeconfigId: "default-token-xls8f")
                 }
             }
         }
