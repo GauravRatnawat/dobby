@@ -24,7 +24,7 @@ spec:
 
     environment {
         registry = "http://harbor.workshop.tw:30002/chartrepo/demo"
-        registryCredential = 'harbor-pull-secret'
+        registryCredential = 'dockerCreds'
         dockerImage = ""
     }
 
